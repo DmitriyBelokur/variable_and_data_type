@@ -2,6 +2,11 @@
 #include <iomanip>
 #include <cmath>
 
+void func();
+void func();
+void func();
+
+void func() {}
 int main(int argc, char const *argv[])
 {
   float value {12345678910.0};
@@ -27,6 +32,6 @@ int main(int argc, char const *argv[])
   std::cout << float_point << std::endl;
   
   std::cout << INFINITY << std::endl;
-  // float_point = 5 / 0;  programm will be terminate with exception (core dump) 
+  // float_point = 5 / 0;  programm will be terminate with exception (core dump)
   return 0;
 }
