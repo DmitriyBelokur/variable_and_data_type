@@ -33,6 +33,10 @@ int main(int argc, char const *argv[])
   */
   printf("zero is = %d\n", zero);
   
+  // можно объвлять переменные в один ряд, только в том случае если у них общий тип
+  int oneline_value1, oneline_value2 = 20, oneline_value3;
+  printf("oneline_value1 is = %d, oneline_value2 is = %d, oneline_value1 is = %d\n", oneline_value1, oneline_value2, oneline_value3);
+
   int tricks = (7, 9);
   printf("tricks is = %d\n", tricks); // напечатает 9, срабатывает правило запятой
   /*
