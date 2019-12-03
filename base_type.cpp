@@ -1,37 +1,31 @@
 #include <iostream>
-#include <iomanip>
-#include <cmath>
 
-void func();
-void func();
-void func();
+// определяем псевдоним типа
+using my_time_t = unsigned long long; // начиная с С++11
+// typedef unsigned long long my_time_t; // до С++11
 
-void func() {}
 int main(int argc, char const *argv[])
 {
-  float value {12345678910.0};
-  std::cout << std::setprecision(10);
-  std::cout << value << std::endl;
+  int a; // на самом деле это signed int ~32 bit, т.е. ключевое слово signed можно опускать
+  short b; // ~16 bit
+  // signed short int b; это идентичная обьявление как и выше, только можно опускать ключевые слова signed и int
+  long c; // ~32-64 bit
+  // signed long int c; это идентичная обьявление как и выше, только можно опускать ключевые слова signed и int
+  unsigned int d; // это беззнаковое целое ~32, как видно чтобы создать беззнаковое значение нужно указать unsigned
+  unsigned short e; // беззнаковое короткое целое ~16
+  // unsigned short int e; это идентичная обьявление как и выше, только можно опустить ключевое слово int
+  unsigned long f; // беззнаковое длиное целое ~32-64, 
+  // unsigned long  int f; это идентичная обьявление как и выше, только можно опустить ключевое слово int
+  long long g; // long long int ~64 начиная с C++11
 
-  double d_value {0.1};
-  std::cout << std::setprecision(6);
-  std::cout << d_value << std::endl;
-  std::cout << std::setprecision(17);
-  std::cout << d_value << std::endl;
+  // присваиваем символьной переменной занчение 65 
+  char ch = 65;
 
-  double div_by_zero = 5.0 / 0.0;
-  std::cout << div_by_zero << std::endl;
-  std::cout << (0.0 / 0.0) << std::endl;
+  // и выводим значение этой переменной на экран, но на экране мы увидем не значение 90, а символ А
+  // это связано с тем что в соотвтетсвии с таблицей кодировки 65 соответсвует символу A
+  std::cout << ch << std::endl;
 
-  double float_point = 5 / 2;
-  std::cout << float_point << std::endl;
-  float_point = 5.0 / 2;
-  std::cout << float_point << std::endl;
-
-  float_point = 2.0 / (1 + 5) ;
-  std::cout << float_point << std::endl;
-  
-  std::cout << INFINITY << std::endl;
-  // float_point = 5 / 0;  programm will be terminate with exception (core dump)
+  my_time_t stat;
+  my_time_t end;
   return 0;
 }
